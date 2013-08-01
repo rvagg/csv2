@@ -20,7 +20,7 @@ CSV2.prototype._processCSV = function (last) {
   if (lines.length && !lines[lines.length - 1].length)
     lines.pop()
 
-  for (i = 0; i < lines.length - 2; i++)
+  for (i = 0; i < lines.length - 1; i++)
     this._processLine(lines[i])
 
   if (!last)

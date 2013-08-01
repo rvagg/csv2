@@ -1,6 +1,6 @@
 {
   "name": "csv2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Node streams2 CSV parser (work in progress)",
   "main": "csv2.js",
   "scripts": {
