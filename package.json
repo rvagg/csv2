@@ -1,0 +1,23 @@
+{
+  "name": "csv2",
+  "version": "0.0.0",
+  "description": "A Node streams2 CSV parser (work in progress)",
+  "main": "csv2.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvagg/csv2.git"
+  },
+  "keywords": [
+    "stream",
+    "streams2",
+    "csv"
+  ],
+  "author": "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
+  "license": "MIT",
+  "dependencies": {
+    "readable-stream": "~1.0.2"
+  }
+}
