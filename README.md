@@ -10,7 +10,7 @@ Will parse an input character stream and pass on an array for each line of CSV d
 
 **csv2** can handle basic CSV quoting and escaping: `foo,"bar","wut? ""whoa!""","commas, in, my, strings??"`
 
-The only main "feature" not currently supported is newlines within quotes strings; newlines are treated strictly as row separators.
+The only main "feature" not currently supported is newlines within quoted strings; newlines are treated strictly as row separators.
 
 ```js
 fs.createReadStream('data.csv')
@@ -24,12 +24,11 @@ Or, use [through2](https://github.com/rvagg/through2) to transform your CSV into
 fs.createReadStream('data.csv')
   .pipe(csv2())
   .pipe(through2({ objectMode: true }, function (chunk, enc, callback) {
-    var data = {
+    this.push({
         name    : chunk[0]
       , address : chunk[3]
       , phone   : chunk[10]
-    }
-    this.push(data)
+    })
     callback()
   }))
   .on('data', console.log)
