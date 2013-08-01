@@ -1,7 +1,7 @@
 {
   "name": "csv2",
   "version": "0.0.2",
-  "description": "A Node streams2 CSV parser (work in progress)",
+  "description": "A Node Streams2 CSV parser",
   "main": "csv2.js",
   "scripts": {
     "test": "node test.js"
@@ -19,5 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "readable-stream": "~1.0.2"
+  },
+  "devDependencies": {
+    "tape": "~1.0.4"
   }
 }
