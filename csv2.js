@@ -17,12 +17,15 @@ CSV2.prototype._processCSV = function (last) {
   var lines = this._rawbuf.split(/\r?\n/)
     , i
 
+  if (lines.length && !lines[lines.length - 1].length)
+    lines.pop()
+
   for (i = 0; i < lines.length - 2; i++)
     this._processLine(lines[i])
 
   if (!last)
-    this._rawbuf = lines[lines.length - 1]
-  else if (lines[lines.length - 1].length)
+    this._rawbuf = lines[lines.length - 1] || ''
+  else if (lines.length && lines[lines.length - 1].length)
     this._processLine(lines[lines.length - 1])
 }
 
