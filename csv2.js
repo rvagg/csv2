@@ -6,6 +6,8 @@ function CSV2 (options) {
     return new CSV2(options)
   if (!options)
     options = {}
+  if (!options.highWaterMark)
+    options.highWaterMark = 16
   options.objectMode = true
   Transform.call(this, options)
   this._rawbuf    = ''
