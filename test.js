@@ -68,8 +68,10 @@ test('simplistic csv data, split into chunks', function (t) {
   })
 
   var outdata = csvify(data)
-    , i = 0
     , e
+
+  i = 0
+
   while (i < outdata.length) {
     e = i + Math.ceil(Math.random() * 10)
     stream.write(new Buffer(outdata.substring(i, e), 'utf8'))
