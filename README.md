@@ -1,6 +1,6 @@
 # csv2
 
-[![Build Status](https://secure.travis-ci.org/rvagg/csv2.png)](http://travis-ci.org/rvagg/csv2)
+[![Build Status](https://secure.travis-ci.org/rvagg/csv2.svg)](http://travis-ci.org/rvagg/csv2)
 
 [![NPM](https://nodei.co/npm/csv2.png?compact=true)](https://nodei.co/npm/csv2/) 
 
