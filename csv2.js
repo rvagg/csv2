@@ -18,7 +18,7 @@ function CSV2 (options) {
 inherits(CSV2, Transform)
 
 CSV2.prototype._processCSV = function (last) {
-  var lines = this._rawbuf.split(/(\r\n|\n|\r)/)
+  var lines = this._rawbuf.split(/\r\n|\n|\r/)
     , i
 
   for (i = 0; i < lines.length - 1; i++)
